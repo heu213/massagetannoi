@@ -1,0 +1,45 @@
+{{> header}}
+    <head>
+      <title>{{title}}</title>
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      <p>Dear Ông/Bà</p>
+      <p>WorldHealth trân trọng thông báo: Khách hàng {{customerName}} đã đặt lịch hẹn tại {{nameHospital}} thành công! </p>        
+        
+      <ul>
+        <h4>Thông tin chi tiết:</h4>
+        <li>
+         <span>Tên khách hàng: </span>
+          <span>{{customerName}}</span>
+        </li>
+        <li>
+          <span>Số điện thoại:</span>
+            <span>{{phoneNumber}}</span>
+        </li>
+        <li>
+          <span>Thời gian:</span>
+          <span>{{createdAt}}</span>
+        </li>
+        <li>
+          <span>Địa chỉ thực hiện dịch vụ:</span>
+          {{#with appointmentAddress}}
+          <span>{{street}}, {{ward}}, {{district}}, {{city}}</span>
+          {{/with}}
+        </li>
+       
+     
+      </ul>
+      <p>Bạn vui lòng truy cập vào hệ thống và tiến hành xử lí thông tin để đảm bảo các hoạt động trên hệ thống</p>
+      <p><i>Trân trọng.</i></p>
+    </div>
+  </td>
+</tr>
+{{> footer}}

@@ -1,0 +1,62 @@
+{{> header}}
+
+<head>
+  <title>{{title}}</title>
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      <p>Dear Dev Back End</p>
+      <p>WorldHealth nhờ bạn code thêm về điều kiện vào folder trong file service của module point system</p>
+
+      <ul>
+        <h4>Nội dung:</h4>
+        {{#if subCondition}}
+        <li>
+          <span>Điều kiện phụ:</span>
+          <ul>
+            {{#each subCondition}}
+            {{#if this.desc}}
+              <li>Mô tả : {{this.desc}}</li>
+            {{/if}}
+            {{#if this.typeValue}}
+              <li>Loại Giá trị : {{this.desc}}</li>
+            {{/if}}
+           {{#if this.value}}
+              <li>Giá trị : {{this.value}}</li>
+              <p>---------------------------<p>
+            {{/if}}
+            {{/each}}
+          </ul>
+          ------
+        </li> 
+        {{/if}}
+        {{#if vi}}
+        <li>
+          <span>Tên điều kiện:</span>
+          <span>{{vi}}</span>
+        </li>
+         {{/if}}
+        {{#if value}}
+        <li>
+          <span>Key điều kiện:</span>
+          <span>{{value}}</span>
+        </li> 
+         {{/if}}
+        {{#if typeCondition}}
+        <li>
+          <span>Loại điều kiện:</span>
+          <span>{{typeCondition}}</span>
+        </li>
+         {{/if}}
+      </ul>
+    </div>
+  </td>
+</tr>
+{{> footer}}

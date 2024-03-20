@@ -1,0 +1,79 @@
+{{> header}}
+    <head>
+      <title>{{title}}</title>
+  <style>
+    .mail-body {
+      padding: 20px;
+      font-size: 16px;
+      background-color: #F8F9FC !important;
+    }
+    .mail-body * {
+      color: #211F78 !important; 
+    }
+    @media (max-width: 414px) {
+    * {
+        font-size: 24px !important;
+    }
+    #context-footer{
+      line-height: 1 !important;
+    }
+    .mail-body * {
+      font-size: 38px !important;
+      
+    }
+
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      <p>Dear {{gender}} {{fullName}}</p>
+      <p>WorldHealth trân trọng thông báo: {{gender}} có lịch hẹn 
+        <a href="{{billLink}}" target="_blank">
+          <b>
+            <i style="color:#1890ff !important; text-decoration: underline;">{{appointmentCode}}</i>
+          </b>
+        </a> 
+          với khách hàng vào ngày {{appointmentDate}}</p>
+        
+      <ul>
+        <h4>Thông tin chi tiết:</h4>
+        <li>
+          <span>Mã khách hàng: </span>
+          <strong>{{customerNumber}}</strong>
+        </li>
+        <li>
+          <span>Tên khách hàng:</span>
+          {{#with customerAddress}}
+            <strong>{{fullName}}</strong>
+          {{/with}}
+        </li>
+        <li>
+          <span>Số điện thoại:</span>
+          {{#with customerAddress}}
+         <a><strong>{{phoneNumber}}</strong></a>  
+          {{/with}}
+        </li>
+        <li>
+          <span>Loại dịch vụ:</span>
+          <strong>{{billItems.snapshotService.name.vi}}</strong>
+        </li>
+        <li>
+          <span>Địa chỉ thực hiện dịch vụ:</span>
+          {{#with customerAddress}}
+          <strong>{{street}}, {{ward}}, {{district}}, {{city}}</strong>
+          {{/with}}
+        </li>
+        <li>
+          <span>Ngày bắt đầu thực hiện dịch vụ:</span>
+          <strong><b>{{appointmentDate}}</b></strong>
+        </li>
+      </ul>
+      <p>{{gender}} vui lòng theo dõi lịch hẹn, thực hiện công tác chuẩn bị và sắp xếp thời gian để công việc được diễn ra thuận lợi và đúng tiến độ.</p>
+      <p>Nếu có bất kỳ sự thay đổi nào về lịch làm việc, {{gender}} vui lòng liên hệ qua hotline: 0912747 362 để được Admin hỗ trợ.</p>
+      <p><i>Trân trọng.</i></p>
+    </div>
+  </td>
+</tr>
+{{> footer}}

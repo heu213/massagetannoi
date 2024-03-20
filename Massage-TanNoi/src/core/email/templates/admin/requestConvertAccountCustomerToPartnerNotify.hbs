@@ -1,0 +1,48 @@
+{{> header}}
+    <head>
+      <title>{{title}}</title>
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      <p>Dear Ông/Bà {{fullName}}</p>
+      <p>WorldHealth trân trọng thông báo: Chúc mừng Ông/bà đã được duyệt yêu cầu rút tiền . Có nội dung như sau : </p>
+        
+      <ul>
+        <h4>Thông tin chi tiết:</h4>
+        <li>
+          <span>Mã Phiếu chi:</span>
+          <span>PC{{code}}</span>
+        </li>
+        <li>
+          <span>Lý do:</span>
+          <span>{{reason}}</span>
+        </li>
+        <li>
+          <span>Họ và tên:</span>
+          <span>{{fullName}}</span>
+        </li>
+        {{#if phone}}
+        <li>
+          <span>Số điện thoại:</span>
+          <span>{{phone}}</span>
+        </li>
+        {{/if}}
+         <li>
+          <span>Tổng tiền:</span>
+          <span>{{totalAmount}} VND</span>
+        </li>
+      </ul>
+      <p>Ông/Bà vui lòng tới cơ sở để được nhận.</p>
+      <p>Nếu có bất kỳ sự thay đổi nào về yêu cầu rút tiền, Ông/Bà vui lòng liên hệ qua hotline: 0912 747 362 để được Admin hỗ trợ.</p>
+      <p><i>Trân trọng.</i></p>
+    </div>
+  </td>
+</tr>
+{{> footer}}

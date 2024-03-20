@@ -1,0 +1,47 @@
+{{> header}}
+    <head>
+      <title>{{title}}</title>
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      <p>Dear Ông/Bà</p>
+      <p>WorldHealth trân trọng thông báo: Khách hàng {{fullName}} đã chuyển đổi đối tác thành công! </p>        
+        
+      <ul>
+        <h4>Thông tin chi tiết:</h4>
+        <li>
+         <span>Mã đối tác: </span>
+          <span>{{partnerId}}</span>
+        </li>
+        <li>
+          <span>Tên đối tác:</span>
+            <span>{{fullName}}</span>
+        </li>
+        <li>
+          <span>Số điện thoại:</span>
+          <span>{{phoneNumber}}</span>
+        </li>
+        <li>
+          <span>Nội dung:</span>
+          <span>{{message}}</span>
+        </li>
+        <li>
+          <span>Mã giới thiệu</span>
+          <span>{{note}}</span>
+        </li>
+       
+     
+      </ul>
+      <p>Bạn vui lòng truy cập vào hệ thống và tiến hành xử lí thông tin để đảm bảo các hoạt động trên hệ thống</p>
+      <p><i>Trân trọng.</i></p>
+    </div>
+  </td>
+</tr>
+{{> footer}}

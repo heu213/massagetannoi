@@ -1,0 +1,67 @@
+{{> header}}
+    <head>
+      <title>{{title}}</title>
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      <p>Dear Ông/Bà {{partnershipName}}</p>
+      <p>WorldHealth trân trọng thông báo: Ông/Bà có lịch hẹn 
+        <a href="{{billLink}}" target="_blank">
+          <b>
+            <i>{{appointmentCode}}</i>
+          </b>
+        </a> 
+          với khách hàng vào ngày {{startDateToServe}}</p>
+        
+      <ul>
+        <h4>Thông tin chi tiết:</h4>
+        <li>
+          
+          <span>Mã khách hàng: </span>
+          <span>{{customerNumber}}</span>
+        </li>
+        <li>
+          <span>Tên khách hàng:</span>
+          {{#with customerAddress}}
+            <span>{{fullName}}</span>
+          {{/with}}
+        </li>
+        <li>
+          <span>Số điện thoại:</span>
+          {{#with customerAddress}}
+          <span>{{phoneNumber}}</span>
+          {{/with}}
+        </li>
+        <li>
+          <span>Loại dịch vụ:</span>
+          <ul>
+            {{#each billItems }}
+            <li><span>{{snapshotService.name.vi}}</span></li>
+            {{/each}}
+          </ul>
+        </li>
+        <li>
+          <span>Địa chỉ thực hiện dịch vụ:</span>
+          {{#with customerAddress}}
+          <span>{{street}}, {{ward}}, {{district}}, {{city}}</span>
+          {{/with}}
+        </li>
+        <li>
+          <span>Ngày bắt đầu thực hiện dịch vụ:</span>
+          <span><b>{{startDateToServe}}</b></span>
+        </li>
+      </ul>
+      <p>Ông/Bà vui lòng theo dõi lịch hẹn và sắp xếp thời gian để công việc được diễn ra thuận lợi và đúng tiến độ.</p>
+      <p>Nếu có bất kỳ sự thay đổi nào về lịch làm việc, Ông/Bà vui lòng liên hệ qua hotline: 0935 57 58 53 để được Admin hỗ trợ.</p>
+      <p><i>Trân trọng.</i></p>
+    </div>
+  </td>
+</tr>
+{{> footer}}

@@ -1,0 +1,30 @@
+{{> header}}
+    <head>
+      <title>{{title}}</title>
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">        
+      <ul>
+        <h4>Nội dung</h4>
+        <li>
+          <span>Dữ liệu:</span>
+          <span>{{pharmacy}}</span>
+        </li>
+        <li>
+          <span>Message:</span>
+          <span>{{message}}</span>
+        </li>
+      </ul>
+      <p>Nếu có bất kỳ sự thay đổi nào về thông tin , Ông/Bà vui lòng liên hệ qua hotline: 0912 747 362 để được Admin hỗ trợ.</p>
+      <p><i>Trân trọng.</i></p>
+    </div>
+  </td>
+</tr>
+{{> footer}}

@@ -1,0 +1,39 @@
+{{> header}}
+
+<head>
+  <title>{{title}}</title>
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      <p>Dear Ông/Bà {{partnerAndProduct.partner.name}},</p>
+      <p>WorldHealth thông báo, hệ thống vừa nhắc nhở đối tác trả thiết bị:</p>
+
+      <ul>
+        <h4>Thông tin chi tiết:</h4>
+        <span>Danh sách thiết bị:</span>
+        {{#each partnerAndProduct.listProduct}}
+        <li>
+          <span>Mã sản phẩm - Tên sản phẩm - Nhà cung cấp:</span>
+          <span>{{product.code}} - {{product.name}} - {{supplier.name}}</span>
+        </li>
+        <li>
+          <span>Ngày trả:</span>
+          <span>{{product.formattedDate}}</span>
+        </li>
+        {{/each}}
+      </ul>
+
+      <p>Nếu có bất kỳ sự thay đổi nào về thông tin, Ông/Bà vui lòng liên hệ qua hotline: 0912 747 362 để được
+        Admin hỗ trợ.</p>
+      <p><i>Trân trọng.</i></p>
+    </div>
+  </td>
+</tr>
+{{> footer}}

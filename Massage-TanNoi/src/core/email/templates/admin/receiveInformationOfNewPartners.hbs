@@ -1,0 +1,45 @@
+{{> header}}
+    <head>
+      <title>{{title}}</title>
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      <p>Dear Admin</p>
+      <p>WorldHealth thông báo, hệ thống vừa tiếp nhận thông tin của đối tác mới:</p>
+        
+      <ul>
+        <h4>Thông tin chi tiết:</h4>
+        <li>
+          <span>Mã nhân viên:</span>
+          <span>{{partnerCode}}</span>
+        </li>
+        <li>
+          <span>Họ và tên:</span>
+          <span>{{name}}</span>
+        </li>
+        <li>
+          <span>Email:</span>
+          <span>{{email}}</span>
+        </li>
+        <li>
+          <span>Số điện thoại:</span>
+          <span>{{phone}}</span>
+        </li>
+        <li>
+          <span>Link để xem đối tác mới được thêm:</span>
+          <span><a href="{{partnerLink}}" target="_blank"><b><i>{{partnerLink}}</i></b></a></span>
+        </li>
+      </ul>
+      <p>Mời quản trị viên tiến hành xử lý thông tin để hệ thống tiếp tục hoạt động!</p>
+      <p><i>Trân trọng.</i></p>
+    </div>
+  </td>
+</tr>
+{{> footer}}

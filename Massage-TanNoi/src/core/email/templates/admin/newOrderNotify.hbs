@@ -1,0 +1,65 @@
+{{> header}}
+
+<head>
+  <title>WORLDHEALTH THÔNG BÁO ĐƠN HÀNG</title>
+  
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+    ul.detail-info li{
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      Dear Admin,
+      <b>WorldHealth </b> thông báo: Hệ thống vừa ghi nhận đơn hàng <a href="{{billLink}}"
+        target="_blank"><b><i>{{billNumber}}</i></b></a> với thông tin như sau:
+
+      <ul>
+        <li>
+          <span>Mã khách hàng: </span>
+          <span>{{customerNumber}}</span>
+        </li>
+        <li>
+          {{#with customerAddress}}
+          <span>Tên khách hàng:</span>
+          <span>{{fullName}}</span>
+        </li>
+        <li>
+          <span>Số điện thoại:</span>
+          
+          <span>{{phoneNumber}}</span>
+          {{/with}}
+        </li>
+        <li>
+          <span>Loại dịch vụ:</span>
+          <ul>
+            {{#each billItems}}
+            <li><span>{{snapshotService.name.vi}}</span></li>
+            {{/each}}
+          </ul>
+        </li>
+        <li>
+          <span>Địa chỉ thực hiện dịch vụ:</span>
+          {{#with customerAddress}}
+          <span>{{street}}, {{ward}}, {{district}}, {{city}}</span>
+          {{/with}}
+        </li>
+        <li>
+          <span>Ngày bắt đầu thực hiện dịch vụ:</span>
+          <span><b>{{startDateToServe}}</b></span>
+        </li>
+      </ul>
+      <p>Bạn vui lòng truy cập vào hệ thống và tiến hành xử lý đơn hàng để đảm bảo dịch vụ được thực hiện theo đúng tiến
+        độ.</p>
+      <p><i>Chúc bạn một ngày tốt lành!</i></p>
+    </div>
+  </td>
+</tr>
+
+{{> footer}}

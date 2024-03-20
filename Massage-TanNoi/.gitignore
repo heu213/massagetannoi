@@ -1,0 +1,16 @@
+node_modules
+dist
+apidoc
+coverage
+.env
+.nyc_output
+.idea
+.dockerignore
+docker-compose.yml
+Dockerfile
+.docker
+package-lock.json
+READMEBUILD.md
+.env.dev
+/dump
+.vscode

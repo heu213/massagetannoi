@@ -1,0 +1,37 @@
+{{> header}}
+    <head>
+      <title>{{title}}</title>
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      <p>Dear Ông/Bà {{name}}</p>
+      <p>WorldHealth trân trọng thông báo: Admin đã đổi tài khoản của Ông/Bà thành đối tác. Có nội dung như sau : </p>
+        
+      <ul>
+        <h4>Thông tin chi tiết tài khoản:</h4>
+        <li>
+          <span>username:</span>
+          <span>{{username}}</span>
+        </li>
+        <li>
+          <span>password:</span>
+          <span>{{password}}</span>
+        </li>
+        <li>
+          <span>Bạn có thể vào link để đăng nhập:</span>
+          <span><a href="{{partnerLink}}" target="_blank"><b><i>{{partnerLink}}</i></b></a></span>
+        </li>
+      </ul>
+      <p>Nếu có bất kỳ sự thay đổi nào về tài khoản, Ông/Bà vui lòng liên hệ qua hotline: 0912 747 362 để được Admin hỗ trợ.</p>
+      <p><i>Trân trọng.</i></p>
+    </div>
+  </td>
+</tr>
+{{> footer}}

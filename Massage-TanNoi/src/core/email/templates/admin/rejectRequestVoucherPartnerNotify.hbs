@@ -1,0 +1,43 @@
+{{> header}}
+    <head>
+      <title>{{title}}</title>
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      <p>Dear Ông/Bà {{name}}</p>
+      <p>WorldHealth trân trọng thông báo: Admin đã huỷ duyệt yêu cầu rút tiền của Ông/Bà. Có nội dung như sau : </p>
+        
+      <ul>
+        <h4>Thông tin chi tiết:</h4>
+        <li>
+          <span>Lý do:</span>
+          <span>{{reasonDeny}}</span>
+        </li>
+        <li>
+          <span>Họ và tên:</span>
+          <span>{{name}}</span>
+        </li>
+        {{#if phone}}
+        <li>
+          <span>Số điện thoại:</span>
+          <span>{{phone}}</span>
+        </li>
+        {{/if}}
+         <li>
+          <span>Tổng tiền:</span>
+          <span>{{totalAmount}} VND</span>
+        </li>
+      </ul>
+      <p>Nếu có bất kỳ sự thay đổi nào về yêu cầu rút tiền, Ông/Bà vui lòng liên hệ qua hotline: 0912 747 362 để được Admin hỗ trợ.</p>
+      <p><i>Trân trọng.</i></p>
+    </div>
+  </td>
+</tr>
+{{> footer}}

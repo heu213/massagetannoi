@@ -1,0 +1,49 @@
+{{> header}}
+
+<head>
+  <title>WORLDHEALTH THÔNG BÁO KHÁCH HÀNG</title>
+
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+
+    ul.detail-info li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      Dear Admin,
+      <b>WorldHealth </b> thông báo: Hệ thống vừa ghi nhận khách hàng {{customerName}} đã để thông tin liên hệ:
+      <ul>
+        <li>
+          <span>Tên khách hàng:</span>
+          <span>{{customerName}}</span>
+        </li>
+        <li>
+          <span>Số điện thoại:</span>
+          <span>{{customerPhoneNumber}}</span>
+        </li>
+        {{#if customerEmail}}
+        <li>
+          <span>Email:</span>
+          <span>{{customerEmail}}</span>
+        </li>
+        {{/if}}
+        {{#if customerMessage}}
+        <li>
+          <span>Message:</span>
+          <span>{{customerMessage}}</span>
+        </li>
+        {{/if}}
+      </ul>
+      <p><i>Chúc bạn một ngày tốt lành!</i></p>
+    </div>
+  </td>
+</tr>
+
+{{> footer}}

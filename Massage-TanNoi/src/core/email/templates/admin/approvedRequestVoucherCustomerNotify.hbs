@@ -1,0 +1,34 @@
+{{> header}}
+    <head>
+      <title>{{title}}</title>
+  <style>
+    .mail-body {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<tr>
+  <td>
+    <div class="mail-body">
+      <p>Dear Ông/Bà {{fullName}}</p>
+      <p>WorldHealth trân trọng thông báo: Ông/Bà {{fullName}} có yêu cầu chuyển đổi tài khoản khách hàng thành đối tác. Có nội dung như sau : </p>
+        
+      <ul>
+        <h4>Thông tin chi tiết:</h4>
+        <li>
+          <span>Tên khách hàng:</span>
+          <span>{{fullName}}</span>
+        </li>
+        {{#if phoneNumber}}
+        <li>
+          <span>Số điện thoại:</span>
+          <span>{{phoneNumber}}</span>
+        </li>
+        {{/if}}
+      </ul>
+      <p><i>Trân trọng.</i></p>
+    </div>
+  </td>
+</tr>
+{{> footer}}
